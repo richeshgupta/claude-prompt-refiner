@@ -7,7 +7,7 @@ name = "claude-prompt-refiner"
 version = "1.0.0"
 description = "Developer-native TUI for refining prompts using Claude Code"
 readme = "README.md"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 requires-python = ">=3.11"
 dependencies = [
     "textual>=0.60.0",
@@ -19,12 +19,7 @@ claude-prompt-refiner = "main:main"
 
 [project.urls]
 Homepage = "https://github.com/richeshgupta/claude-prompt-refiner"
-Repository = "https://github.com/richeshgupta/claude-prompt-refiner"
 
 [tool.setuptools]
 py-modules = ["main", "app", "claude", "engine", "techniques"]
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["*.py"]
-exclude = ["tests*", "docs*", ".venv*"]
