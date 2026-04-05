@@ -61,7 +61,8 @@ pipx install claude-prompt-refiner
 
 **Via Homebrew**:
 ```bash
-brew install richeshgupta/claude-prompt-refiner/claude-prompt-refiner
+brew tap richeshgupta/claude-prompt-refiner https://github.com/richeshgupta/claude-prompt-refiner
+brew install claude-prompt-refiner
 ```
 
 **Via pip**:
