@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 claude-prompt-refiner = "main:main"
+cpr = "main:main"
 
 [project.urls]
 Homepage = "https://github.com/richeshgupta/claude-prompt-refiner"
