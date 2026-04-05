@@ -5,8 +5,6 @@ class ClaudePromptRefiner < Formula
   # sha256 will be updated after first PyPI publish
   sha256 "PLACEHOLDER_FILL_AFTER_FIRST_PYPI_PUBLISH"
   license "MIT"
-  version "1.0.0"
-
   depends_on "pipx"
   depends_on "python@3.11"
 
@@ -14,7 +12,7 @@ class ClaudePromptRefiner < Formula
     system "pipx", "install", "claude-prompt-refiner==#{version}",
            "--python", Formula["python@3.11"].opt_bin/"python3.11",
            "--home", prefix
-    bin.install_symlink Dir["#{prefix}/bin/claude-prompt-refiner"]
+    bin.install_symlink prefix/"bin/claude-prompt-refiner"
   end
 
   test do

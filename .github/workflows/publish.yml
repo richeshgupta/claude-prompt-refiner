@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,7 +43,7 @@ jobs:
   publish-pypi:
     needs: build
     runs-on: ubuntu-latest
-    if: "!contains(github.ref, '-rc')"
+    if: "startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, '-')"
     environment: pypi
     permissions:
       id-token: write
