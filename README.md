@@ -4,6 +4,10 @@ A developer-native terminal UI that automatically refines your prompts using pro
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Screenshot
+
+![Prompt Refiner in action](assets/screenshot.png)
+
 ## Demo
 
 ```
