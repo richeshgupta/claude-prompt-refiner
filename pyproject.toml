@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "claude-prompt-refiner"
-version = "1.0.0"
+version = "1.0.1"
 description = "Developer-native TUI for refining prompts using Claude Code"
 readme = "README.md"
 license = { file = "LICENSE" }
