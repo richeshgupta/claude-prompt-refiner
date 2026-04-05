@@ -27,3 +27,40 @@ jobs:
 
       - name: Run tests
         run: pytest tests/ -v
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build package
+        run: pip install build
+
+      - name: Build package
+        run: python -m build
+
+      - name: Install built wheel
+        run: pip install dist/*.whl
+
+      - name: Verify entry point
+        run: claude-prompt-refiner 2>&1 | grep -q "claude CLI not found" && echo "Entry point OK"
+
+  brew-lint:
+    name: brew-lint
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Homebrew formula style
+        run: |
+          brew style \
+            --except FormulaAudit/PyPiUrls,FormulaAudit/Checksum,FormulaAudit/ChecksumCase \
+            Formula/claude-prompt-refiner.rb

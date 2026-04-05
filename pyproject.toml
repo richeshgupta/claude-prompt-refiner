@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-prompt-refiner"
+version = "1.0.0"
+description = "Developer-native TUI for refining prompts using Claude Code"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "textual>=0.60.0",
+    "pyperclip>=1.8.0",
+]
+
+[project.scripts]
+claude-prompt-refiner = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/richeshgupta/claude-prompt-refiner"
+
+[tool.setuptools]
+py-modules = ["main", "app", "claude", "engine", "techniques"]
+
