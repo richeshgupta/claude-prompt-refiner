@@ -6,7 +6,7 @@ A developer-native terminal UI that automatically refines your prompts using pro
 
 ## Screenshot
 
-![Prompt Refiner in action](assets/screenshot.png)
+![Prompt Refiner in action](https://raw.githubusercontent.com/richeshgupta/claude-prompt-refiner/master/assets/screenshot.png)
 
 ## Demo
 
