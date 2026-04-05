@@ -2,7 +2,7 @@
 
 A developer-native terminal UI that automatically refines your prompts using proven prompt engineering techniques — powered by your existing **Claude Code subscription**. No separate API key required.
 
-![Python](https://img.shields.io/badge/python-3.11+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.11+-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![PyPI](https://img.shields.io/pypi/v/claude-prompt-refiner)
 
 ## Screenshot
 
@@ -54,18 +54,26 @@ A developer-native terminal UI that automatically refines your prompts using pro
 
 ## Installation
 
+**Via pipx** (recommended — isolated, no venv management):
 ```bash
-git clone https://github.com/yourusername/claude-prompt-refiner-adv
-cd claude-prompt-refiner-adv
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+pipx install claude-prompt-refiner
+```
+
+**Via Homebrew**:
+```bash
+brew install richeshgupta/claude-prompt-refiner/claude-prompt-refiner
+```
+
+**Via pip**:
+```bash
+pip install claude-prompt-refiner
 ```
 
 ## Usage
 
 ```bash
-python main.py
+cpr                    # short alias
+claude-prompt-refiner  # full command
 ```
 
 ## Keybindings
@@ -113,6 +121,10 @@ python -m pytest tests/ -v
 | `claude-haiku-4-5` | Fast, lightweight refinements |
 | `claude-sonnet-4-6` | Default — best balance of speed and quality |
 | `claude-opus-4-6` | Most thorough refinements |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
