@@ -158,7 +158,7 @@ class PromptRefinerApp(App):
     CSS = CSS
 
     BINDINGS = [
-        Binding("ctrl+enter", "refine", "Refine", show=True),
+        Binding("ctrl+r", "refine", "Refine", show=True),
         Binding("y", "accept", "Accept", show=True),
         Binding("n", "reject", "Reject", show=True),
         Binding("e", "edit_refine", "Edit+Refine", show=True),
