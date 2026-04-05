@@ -60,4 +60,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Audit Homebrew formula
-        run: brew audit --formula Formula/claude-prompt-refiner.rb
+        run: |
+          TAP_DIR="$(brew --repository)/Library/Taps/richeshgupta/homebrew-claude-prompt-refiner"
+          mkdir -p "$TAP_DIR/Formula"
+          cp Formula/claude-prompt-refiner.rb "$TAP_DIR/Formula/"
+          brew audit --formula richeshgupta/claude-prompt-refiner/claude-prompt-refiner
