@@ -29,7 +29,7 @@ jobs:
         run: pytest tests/ -v
 
   build:
-    name: build and entry point validation
+    name: build
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +53,7 @@ jobs:
         run: claude-prompt-refiner 2>&1 | grep -q "claude CLI not found" && echo "Entry point OK"
 
   brew-lint:
-    name: Homebrew formula lint
+    name: brew-lint
     runs-on: macos-latest
 
     steps:
