@@ -51,3 +51,13 @@ jobs:
 
       - name: Verify entry point
         run: claude-prompt-refiner 2>&1 | grep -q "claude CLI not found" && echo "Entry point OK"
+
+  brew-lint:
+    name: Homebrew formula lint
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit Homebrew formula
+        run: brew audit --formula Formula/claude-prompt-refiner.rb
